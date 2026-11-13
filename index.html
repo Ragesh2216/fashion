@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ÉLÉGANCE Atelier - Contemporary Haute Couture, Designer Apparel, Luxury Footwear and Fine Accessories." />
+  <title>Stackly | Luxury Fashion & Designer Clothing Boutique</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Boutique Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+ 
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <!-- Brand Identity -->
+      <a href="index.html" class="brand-logo" aria-label="Stackly Boutique Homepage">
+        <img src="logo_0956.webp" alt="Stackly Logo" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#shopCatalog" class="nav-link">Shop All</a>
+        <a href="#newArrivals" class="nav-link">New In</a>
+        <a href="#featuredCategories" class="nav-link">Categories</a>
+        <a href="#trending" class="nav-link">Trending</a>
+        <a href="#bestSellers" class="nav-link">Best Sellers</a>
+        <a href="#specialOffers" class="nav-link">Special Offers</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Live Quick Search -->
+        <div class="header-search-wrap">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="headerSearchInput" placeholder="Search creations..." aria-label="Search creations" />
+        </div>
+
+        <!-- Wishlist Drawer Trigger -->
+        <button type="button" class="header-icon-btn wishlist-drawer-trigger" aria-label="Open Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </button>
+
+        <!-- Cart Drawer Trigger -->
+        <button type="button" class="header-icon-btn cart-drawer-trigger" aria-label="Open Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <img src="logo_0956.webp" alt="Stackly Logo" class="brand-logo-img" />
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobileNavClose" aria-label="Close Mobile Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="#shopCatalog" class="mobile-nav-link">Shop The Collection <span>→</span></a>
+      <a href="#newArrivals" class="mobile-nav-link">New Arrivals <span>→</span></a>
+      <a href="#featuredCategories" class="mobile-nav-link">Featured Categories <span>→</span></a>
+      <a href="#trending" class="mobile-nav-link">Trending Pieces <span>→</span></a>
+      <a href="#bestSellers" class="mobile-nav-link">Best Sellers <span>→</span></a>
+      <a href="#specialOffers" class="mobile-nav-link">Special Offers <span>→</span></a>
+      <a href="#testimonials" class="mobile-nav-link">Client Reviews <span>→</span></a>
+    </div>
+
+    <div class="mobile-drawer-footer" style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--color-border);">
+      <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 12px;">Private Client Concierge</p>
+      <a href="tel:+18005553534" style="color: var(--color-gold); font-size: 0.9rem; font-weight: 600;">+1 (800) 555-ÉLÉGANCE</a>
+    </div>
+  </aside>
+
+  <!-- ==================== HERO SECTION WITH FASHION BANNER ==================== -->
+  <section class="hero-section" id="heroBanner">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <span class="hero-tag">Autumn / Winter 2026 Collection</span>
+        <h1 class="hero-title">Refining Modern <em>Elegance</em> With Timeless Craft.</h1>
+        <p class="hero-subtitle">
+          Discover a curated anthology of haute couture evening wear, precision-tailored Italian menswear, sculpted footwear, and bespoke artisan accessories.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#shopCatalog" class="btn-primary-luxury">
+            <span>Explore Collection</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#specialOffers" class="btn-secondary-luxury">
+            <span>Special Offers</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">15,000+</span>
+            <span class="stat-label">Bespoke Pieces Sold</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.4%</span>
+            <span class="stat-label">Client Approval</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">120+</span>
+            <span class="stat-label">Countries Shipped</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND ASSURANCES STRIP ==================== -->
+  <section class="assurances-strip">
+    <div class="container">
+      <div class="assurances-grid">
+        <div class="assurance-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="assurance-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="assurance-text">
+            <h4>Complimentary Shipping</h4>
+            <p>On all worldwide orders over $150</p>
+          </div>
+        </div>
+        <div class="assurance-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="assurance-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="assurance-text">
+            <h4>Artisan Authenticity</h4>
+            <p>100% verified atelier craftsmanship</p>
+          </div>
+        </div>
+        <div class="assurance-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="assurance-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          <div class="assurance-text">
+            <h4>30-Day Atelier Returns</h4>
+            <p>Complimentary concierge return pickups</p>
+          </div>
+        </div>
+        <div class="assurance-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="assurance-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="assurance-text">
+            <h4>Private Client Support</h4>
+            <p>Dedicated fashion stylist advisors 24/7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED CATEGORIES SECTION ==================== -->
+  <section class="featured-categories-section" id="featuredCategories">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Curated Departments</span>
+        <h2 class="section-title">Explore By Atelier Category</h2>
+        <p class="section-desc">Delve into our hand-selected categories designed for every moment of refined modern living.</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1: Women's Dresses -->
+        <div class="featured-cat-card" data-category="womens-dresses" data-aos="fade-up" data-aos-delay="100">
+          <img class="cat-card-bg" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&auto=format&fit=crop&q=80" alt="Women's Haute Couture Dresses" loading="lazy" />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-content">
+            <span class="cat-tag">Atelier Evening</span>
+            <h3 class="cat-name">Women's Dresses</h3>
+            <span class="cat-explore-link">Explore Collection &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Men's Shirts -->
+        <div class="featured-cat-card" data-category="mens-shirts" data-aos="fade-up" data-aos-delay="200">
+          <img class="cat-card-bg" src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80" alt="Men's Italian Tailored Shirts" loading="lazy" />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-content">
+            <span class="cat-tag">Sartoria Milano</span>
+            <h3 class="cat-name">Men's Shirts & Tailoring</h3>
+            <span class="cat-explore-link">Explore Collection &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Handbags & Leather Goods -->
+        <div class="featured-cat-card" data-category="womens-bags" data-aos="fade-up" data-aos-delay="300">
+          <img class="cat-card-bg" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&auto=format&fit=crop&q=80" alt="Luxury Handbags" loading="lazy" />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-content">
+            <span class="cat-tag">Maison Leather</span>
+            <h3 class="cat-name">Luxury Handbags</h3>
+            <span class="cat-explore-link">Explore Collection &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Designer Shoes -->
+        <div class="featured-cat-card" data-category="womens-shoes" data-aos="fade-up" data-aos-delay="400">
+          <img class="cat-card-bg" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&auto=format&fit=crop&q=80" alt="Sculpted Designer Footwear" loading="lazy" />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-content">
+            <span class="cat-tag">Italian Soles</span>
+            <h3 class="cat-name">Designer Footwear</h3>
+            <span class="cat-explore-link">Explore Collection &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW ARRIVALS SECTION ==================== -->
+  <section class="curated-section" id="newArrivals">
+    <div class="container">
+      <div class="section-top-bar" data-aos="fade-up">
+        <div>
+          <span class="section-subtitle">Fresh From Runway</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <a href="#shopCatalog" class="view-all-link">Browse Full Edit &rarr;</a>
+      </div>
+      <div class="products-grid" id="newArrivalsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRENDING PRODUCTS SECTION ==================== -->
+  <section class="curated-section alt-bg" id="trending">
+    <div class="container">
+      <div class="section-top-bar" data-aos="fade-up">
+        <div>
+          <span class="section-subtitle">Global Desirables</span>
+          <h2 class="section-title">Trending Styles</h2>
+        </div>
+        <a href="#shopCatalog" class="view-all-link">See What's Popular &rarr;</a>
+      </div>
+      <div class="products-grid" id="trendingGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BEST SELLERS SECTION ==================== -->
+  <section class="curated-section" id="bestSellers">
+    <div class="container">
+      <div class="section-top-bar" data-aos="fade-up">
+        <div>
+          <span class="section-subtitle">Client Favorites</span>
+          <h2 class="section-title">Best Sellers</h2>
+        </div>
+        <a href="#shopCatalog" class="view-all-link">View All Classics &rarr;</a>
+      </div>
+      <div class="products-grid" id="bestSellersGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIAL OFFERS SECTION ==================== -->
+  <section class="special-offers-section" id="specialOffers">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Exclusive Opportunities</span>
+        <h2 class="section-title">Curated Promotional Offers</h2>
+        <p class="section-desc">Take advantage of seasonal privileges, limited couture discounts, and membership benefits.</p>
+      </div>
+
+      <div class="promos-grid">
+        <!-- Promo Offer 1: Flash Sale with Countdown Timer -->
+        <div class="promo-card highlight" data-aos="fade-up" data-aos-delay="100">
+          <div class="promo-header">
+            <span class="promo-badge">Flash Atelier Event</span>
+            <h3 class="promo-title">Up to 40% Off Selected Couture</h3>
+            <p class="promo-desc">Private weekend flash sale on signature dresses, outerwear, and runway samples.</p>
+          </div>
+
+          <div class="countdown-box">
+            <div class="countdown-segment">
+              <span class="countdown-num" id="promoHours">47</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-segment">
+              <span class="countdown-num" id="promoMins">59</span>
+              <span class="countdown-label">Mins</span>
+            </div>
+            <span class="countdown-colon">:</span>
+            <div class="countdown-segment">
+              <span class="countdown-num" id="promoSecs">59</span>
+              <span class="countdown-label">Secs</span>
+            </div>
+          </div>
+
+          <a href="#shopCatalog" class="btn-primary-luxury">
+            <span>Shop Flash Sale</span>
+          </a>
+        </div>
+
+        <!-- Promo Offer 2: Designer Bundle -->
+        <div class="promo-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="promo-header">
+            <span class="promo-badge">Artisan Bundle</span>
+            <h3 class="promo-title">Complimentary Worldwide Shipping</h3>
+            <p class="promo-desc">Enjoy free worldwide delivery on all orders using the special promotional voucher.</p>
+          </div>
+
+          <div class="promo-code-reveal">
+            <span class="code-text">FREESHIP</span>
+            <button type="button" class="btn-copy-mini" onclick="window.boutiqueCart.quickApply('FREESHIP')">Apply In Bag</button>
+          </div>
+
+          <button type="button" class="btn-secondary-luxury" onclick="window.boutiqueCart.quickApply('FREESHIP')">
+            <span>Activate Free Shipping</span>
+          </button>
+        </div>
+
+        <!-- Promo Offer 3: VIP First Order -->
+        <div class="promo-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="promo-header">
+            <span class="promo-badge">VIP Invitation</span>
+            <h3 class="promo-title">20% Off Your Entire Order</h3>
+            <p class="promo-desc">First-time patrons receive 20% off all apparel, footwear, and accessories.</p>
+          </div>
+
+          <div class="promo-code-reveal">
+            <span class="code-text">ELEGANCE20</span>
+            <button type="button" class="btn-copy-mini" onclick="window.boutiqueCart.quickApply('ELEGANCE20')">Apply In Bag</button>
+          </div>
+
+          <button type="button" class="btn-secondary-luxury" onclick="window.boutiqueCart.quickApply('ELEGANCE20')">
+            <span>Apply 20% Privilege</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN INTERACTIVE SHOP CATALOG ==================== -->
+  <section class="shop-catalog-section" id="shopCatalog">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">The Complete Collection</span>
+        <h2 class="section-title">All Boutique Creations</h2>
+        <p class="section-desc">Filter by department, search by designer pieces, and sort by price or verified customer rating.</p>
+      </div>
+
+      <!-- Controls Bar: Search, Categories, Sorting -->
+      <div class="catalog-controls-bar" data-aos="fade-up">
+        <div class="catalog-top-row">
+          <!-- Search box -->
+          <div class="catalog-search-box">
+            <svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="catalogSearchInput" placeholder="Search by name, fabric, brand, or tag..." aria-label="Search products" />
+          </div>
+
+          <!-- Sorting dropdown -->
+          <div class="catalog-sort-box">
+            <label for="catalogSortSelect">Sort By:</label>
+            <select id="catalogSortSelect">
+              <option value="featured">Featured / Curated</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="title">Alphabetical (A - Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-filter-pills" role="tablist" aria-label="Product categories">
+          <button type="button" class="cat-filter-btn active" data-category="all" role="tab">All Pieces</button>
+          <button type="button" class="cat-filter-btn" data-category="womens-dresses" role="tab">Women's Dresses</button>
+          <button type="button" class="cat-filter-btn" data-category="mens-shirts" role="tab">Men's Shirts</button>
+          <button type="button" class="cat-filter-btn" data-category="womens-bags" role="tab">Bags & Luggage</button>
+          <button type="button" class="cat-filter-btn" data-category="womens-shoes" role="tab">Shoes & Heels</button>
+          <button type="button" class="cat-filter-btn" data-category="womens-jewellery" role="tab">Jewellery</button>
+          <button type="button" class="cat-filter-btn" data-category="fragrances" role="tab">Fragrances</button>
+          <button type="button" class="cat-filter-btn" data-category="sunglasses" role="tab">Eyewear</button>
+        </div>
+      </div>
+
+      <!-- Error State Banner -->
+      <div class="catalog-error-banner" id="catalogErrorBanner">
+        <p class="error-message-text" style="margin-bottom: 12px; color: var(--color-danger);"></p>
+        <button type="button" class="btn-primary-luxury" onclick="window.boutiqueApp.loadInitialProducts()">
+          <span>Retry Loading Catalog</span>
+        </button>
+      </div>
+
+      <!-- Skeleton Loading Placeholders -->
+      <div class="skeleton-grid" id="catalogSkeleton">
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-media"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line price"></div></div></div>
+      </div>
+
+      <!-- Main Dynamic Product Grid -->
+      <div class="products-grid" id="catalogProductGrid">
+        <!-- Dynamically populated via DummyJSON API in app.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="catalog-empty-state" id="catalogEmptyState">
+        <div class="empty-state-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+        </div>
+        <h3>No Matching Creations Found</h3>
+        <p>We could not find any pieces matching your current filters or search terms.</p>
+        <button type="button" class="btn-secondary-luxury" onclick="document.getElementById('catalogSearchInput').value=''; window.boutiqueApp.setCategory('all');">
+          Reset All Filters
+        </button>
+      </div>
+
+      <!-- Load More Pagination -->
+      <div class="load-more-wrap" id="loadMoreContainer">
+        <button type="button" class="btn-primary-luxury" id="loadMoreProductsBtn">
+          <span>Load More Pieces</span>
+        </button>
+        <span class="load-more-info" id="loadMoreInfo"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CUSTOMER TESTIMONIALS SECTION ==================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Patron Voices</span>
+        <h2 class="section-title">Words From Our Clientele</h2>
+        <p class="section-desc">Read genuine accounts from patrons of the Maison across the globe.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-quote">
+            "The silk chiffon evening gown draped like liquid starlight. The hand-pleated bodice fits with exact couture precision, and the white-glove packaging was an unforgettable unboxing experience."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80" alt="Geneviève Laurent" />
+            <div class="author-details">
+              <h4>Geneviève Laurent</h4>
+              <span class="verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Verified Client • Paris, France
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-quote">
+            "The Italian Oxford shirt possesses the finest two-ply Egyptian cotton weave I have experienced in two decades of tailoring. The Mother-of-pearl buttons and crisp French cuffs are sublime."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80" alt="Julian Montgomery" />
+            <div class="author-details">
+              <h4>Julian Montgomery</h4>
+              <span class="verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Verified Client • London, UK
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-quote">
+            "My 18k diamond huggie earrings arrived in Dubai within 48 hours in a silk-lined jewel case. The sparkle under natural sunlight is breathtaking. ÉLÉGANCE sets the gold standard in luxury e-commerce."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80" alt="Sophia Al-Mansoor" />
+            <div class="author-details">
+              <h4>Sophia Al-Mansoor</h4>
+              <span class="verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Verified Client • Dubai, UAE
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER SUBSCRIPTION SECTION ==================== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box" data-aos="fade-up">
+        <span class="section-subtitle">The Atelier Circle</span>
+        <h2 class="section-title">Receive Private Previews & Privileges</h2>
+        <p class="section-desc">
+          Subscribe to enter the inner sanctum of ÉLÉGANCE. Receive invitations to private runway previews, seasonal trunk shows, and a complimentary <strong>20% voucher</strong>.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="email" placeholder="Enter your private email address..." required aria-label="Email address" />
+          <button type="submit" class="btn-primary-luxury">
+            <span>Subscribe & Unlock 20%</span>
+          </button>
+        </form>
+
+        <div id="newsletterResponse" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Story Column -->
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <img src="logo_0956.webp" alt="Stackly Logo" class="brand-logo-img footer-logo-img" />
+          </div>
+          <p>
+            An ode to classic tailoring and visionary contemporary couture. Formulated in Paris and Milan, delivered with distinction worldwide.
+          </p>
+          <div class="social-links">
+            <a href="404.html" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="404.html" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="404.html" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><circle cx="12" cy="12" r="10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Department Links -->
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="#shopCatalog" onclick="window.boutiqueApp.setCategory('womens-dresses')">Women's Couture</a>
+            <a href="#shopCatalog" onclick="window.boutiqueApp.setCategory('mens-shirts')">Men's Sartoria</a>
+            <a href="#shopCatalog" onclick="window.boutiqueApp.setCategory('womens-bags')">Leather Goods</a>
+            <a href="#shopCatalog" onclick="window.boutiqueApp.setCategory('womens-shoes')">Designer Footwear</a>
+            <a href="#shopCatalog" onclick="window.boutiqueApp.setCategory('fragrances')">Fine Fragrances</a>
+            <a href="404.html">Limited Runway Editions</a>
+          </div>
+        </div>
+
+        <!-- Client Services -->
+        <div class="footer-col">
+          <h4>Client Care</h4>
+          <div class="footer-links">
+            <a href="404.html">Complimentary Shipping & Delivery</a>
+            <a href="404.html">30-Day Atelier Returns</a>
+            <a href="404.html">Bespoke Sizing Consultation</a>
+            <a href="404.html">Garment Preservation & Care</a>
+            <a href="404.html">Track Private Consignment</a>
+            <a href="404.html">Frequently Asked Questions</a>
+          </div>
+        </div>
+
+        <!-- Concierge & Boutiques -->
+        <div class="footer-col">
+          <h4>Boutique Concierge</h4>
+          <div class="footer-contact-info">
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>18 Place Vendôme, 75001 Paris, France</span>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+33 (0) 1 42 68 00 20</span>
+            </div>
+            <div class="contact-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Monday – Saturday: 10:00 – 19:30 CET</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 ÉLÉGANCE Atelier Inc. All rights reserved. Powered by DummyJSON Products API.</p>
+        <div class="payment-methods">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">APPLE PAY</span>
+          <span class="payment-badge">PAYPAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CART SLIDE-OVER DRAWER ==================== -->
+  <div class="drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="slide-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <h3>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Your Shopping Bag
+      </h3>
+      <button type="button" class="drawer-close-btn" id="cartDrawerClose" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="drawer-body">
+      <div class="drawer-empty-state" id="cartDrawerEmpty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h4>Your Shopping Bag is Empty</h4>
+        <p>Explore our latest creations and select timeless pieces to begin your order.</p>
+        <button type="button" class="btn-primary-luxury" onclick="window.closeCartDrawer(); document.getElementById('shopCatalog').scrollIntoView({behavior:'smooth'});">
+          Explore Boutique
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cartDrawerItems"></div>
+
+      <!-- Financial Summary & Coupon Box -->
+      <div id="cartDrawerSummary" style="display: none;"></div>
+    </div>
+
+    <div class="drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <button type="button" class="btn-primary-luxury" style="width: 100%;" onclick="window.boutiqueModal.openCheckoutModal()">
+        <span>Proceed To Private Checkout</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== WISHLIST SLIDE-OVER DRAWER ==================== -->
+  <div class="drawer-overlay" id="wishlistDrawerOverlay"></div>
+  <aside class="slide-drawer" id="wishlistDrawer" aria-label="Wishlist">
+    <div class="drawer-header">
+      <h3>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Saved In Wishlist
+      </h3>
+      <button type="button" class="drawer-close-btn" id="wishlistDrawerClose" aria-label="Close Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="drawer-empty-state" id="wishlistDrawerEmpty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h4>Your Wishlist is Empty</h4>
+        <p>Save pieces you love by tapping the heart icon on any creation.</p>
+        <button type="button" class="btn-primary-luxury" onclick="window.closeWishlistDrawer(); document.getElementById('shopCatalog').scrollIntoView({behavior:'smooth'});">
+          Browse Creations
+        </button>
+      </div>
+
+      <div id="wishlistDrawerItems"></div>
+    </div>
+  </aside>
+
+  <!-- ==================== PRODUCT QUICK VIEW MODAL ==================== -->
+  <div class="modal-overlay" id="productQuickViewModal">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" onclick="window.boutiqueModal.closeAllModals()" aria-label="Close Quick View">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quickViewModalBody">
+        <!-- Rendered dynamically by modal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT MODAL ==================== -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-container checkout-modal-container">
+      <button type="button" class="modal-close-btn" onclick="window.boutiqueModal.closeAllModals()" aria-label="Close Checkout">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <form id="checkoutForm" onsubmit="window.boutiqueModal.processCheckout(event)">
+        <div class="checkout-grid">
+          <!-- Client Details & Shipping -->
+          <div class="checkout-form-col">
+            <h3>Delivery & Client Details</h3>
+            
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="checkoutFullName">Full Name *</label>
+                <input type="text" id="checkoutFullName" name="fullName" required placeholder="Lady Eleanor Sterling" value="Eleanor Sterling" />
+              </div>
+              <div class="form-field">
+                <label for="checkoutEmail">Email Address *</label>
+                <input type="email" id="checkoutEmail" name="email" required placeholder="eleanor@sterling.com" value="eleanor@sterling.com" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="checkoutAddress">Delivery Address *</label>
+              <input type="text" id="checkoutAddress" name="address" required placeholder="14 Belgrave Square, Apartment 4B" value="14 Belgrave Square" />
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="checkoutCity">City *</label>
+                <input type="text" id="checkoutCity" name="city" required placeholder="London" value="London" />
+              </div>
+              <div class="form-field">
+                <label for="checkoutPostalCode">Postal / Zip Code *</label>
+                <input type="text" id="checkoutPostalCode" name="postalCode" required placeholder="SW1X 8PS" value="SW1X 8PS" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="checkoutCountry">Country *</label>
+              <select id="checkoutCountry" name="country">
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States" selected>United States</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+              </select>
+            </div>
+
+            <h4 style="margin: 20px 0 10px; font-size: 0.95rem;">Payment Method</h4>
+            <div class="payment-method-selector">
+              <label class="payment-option-card">
+                <input type="radio" name="paymentMethod" value="Credit Card" checked />
+                <span>Credit / Debit Card (Encrypted 256-Bit SSL)</span>
+              </label>
+              <label class="payment-option-card">
+                <input type="radio" name="paymentMethod" value="Apple Pay" />
+                <span>Apple Pay / Digital Wallet</span>
+              </label>
+              <label class="payment-option-card">
+                <input type="radio" name="paymentMethod" value="Cash On Delivery" />
+                <span>Private Courier Payment on Delivery (Cash / POS)</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary-luxury" style="width: 100%;">
+              <span>Complete Purchase & Secure Order</span>
+            </button>
+          </div>
+
+          <!-- Order Summary in Checkout -->
+          <div class="checkout-summary-col">
+            <h3>Order Review</h3>
+            <div class="checkout-mini-items-list" id="checkoutOrderItems"></div>
+            <div class="cart-breakdown" id="checkoutSummaryBox"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== ORDER CONFIRMATION MODAL ==================== -->
+  <div class="modal-overlay" id="orderConfirmationModal">
+    <div class="modal-container" style="max-width: 650px;">
+      <button type="button" class="modal-close-btn" onclick="window.boutiqueModal.closeAllModals()" aria-label="Close Confirmation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="orderConfirmationContent">
+        <!-- Rendered dynamically by modal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT SCRIPTS ==================== -->
+  <!-- AOS Script CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Modular Boutique Application Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
